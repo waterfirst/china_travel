@@ -12,6 +12,13 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+
+# 앱 시작부에 추가
+if "app_mode" in st.session_state:
+    app_mode = st.session_state.app_mode
+    # 세션 상태를 사용한 후 초기화하여 한 번만 리다이렉션되도록 함
+    st.session_state.app_mode = app_mode
+
 # 스타일 정의 (CSS)
 st.markdown(
     """
@@ -244,7 +251,7 @@ if app_mode == "일정표":
         # 지도로 경로 보기 버튼
         if st.button("🗺️ 지도로 경로 보기"):
             st.session_state.app_mode = "지도"
-            st.experimental_rerun()
+            st.rerun()  # experimental_rerun() 대신 rerun() 사용
 
 if app_mode == "지도":
     st.markdown('<h1 class="main-header">여행 지도</h1>', unsafe_allow_html=True)
