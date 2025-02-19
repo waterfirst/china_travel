@@ -55,8 +55,8 @@ if app_mode == "홈":
         st.markdown(
             """
         <div class="info-box">
-            <p><strong>여행자:</strong> 박상욱</p>
-            <p><strong>동행자:</strong> 최낙초</p>
+            <p><strong>여행자1:</strong> 박상욱</p>
+            <p><strong>여행자2:</strong> 최낙초</p>
             <p><strong>여행 기간:</strong> 2025년 3월 2일 ~ 3월 4일</p>
             <p><strong>여행 경로:</strong> 인천 → 지난 → 태산 → 곡부 → 지난 → 인천</p>
         </div>
