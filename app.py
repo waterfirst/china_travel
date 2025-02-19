@@ -845,269 +845,273 @@ if app_mode == "긴급 연락처":
                 unsafe_allow_html=True,
             )
     # 병원 탭 내용
-with tabs[2]:
-    st.markdown("<h2 class='sub-header'>주요 병원 정보</h2>", unsafe_allow_html=True)
-
-    hospitals = [
-        {
-            "이름": "지난시 제일인민병원",
-            "위치": "지난",
-            "전화": "+86-531-8798-7777",
-            "주소": "16 Jingshilu, Huaiyin District, Jinan",
-            "영어 가능": "일부 의사/간호사",
-            "24시간 응급실": "가능",
-            "특징": "국제 진료부 있음",
-            "거리": "지난 레일웨이 호텔에서 약 3km",
-        },
-        {
-            "이름": "태안시 중심병원",
-            "위치": "태안",
-            "전화": "+86-538-6297-999",
-            "주소": "29 Longtan Road, Taishan District, Tai'an",
-            "영어 가능": "제한적",
-            "24시간 응급실": "가능",
-            "특징": "태산 관광객 응급처치 경험 많음",
-            "거리": "태산 입구에서 약 5km",
-        },
-        {
-            "이름": "곡부시 인민병원",
-            "위치": "곡부",
-            "전화": "+86-537-4491-120",
-            "주소": "59 Chunqiu Middle Road, Qufu",
-            "영어 가능": "매우 제한적",
-            "24시간 응급실": "가능",
-            "특징": "기본 응급처치 가능",
-            "거리": "라방 호텔에서 약 2km",
-        },
-    ]
-
-    for hospital in hospitals:
+    with tabs[2]:
         st.markdown(
-            f"""
-        <div class="emergency-box">
-            <h3>{hospital['이름']} ({hospital['위치']})</h3>
-            <p><strong>전화:</strong> {hospital['전화']}</p>
-            <p><strong>주소:</strong> {hospital['주소']}</p>
-            <p><strong>영어 의사소통:</strong> {hospital['영어 가능']}</p>
-            <p><strong>24시간 응급실:</strong> {hospital['24시간 응급실']}</p>
-            <p><strong>특징:</strong> {hospital['특징']}</p>
-            <p><strong>위치:</strong> {hospital['거리']}</p>
-        </div>
-        """,
-            unsafe_allow_html=True,
+            "<h2 class='sub-header'>주요 병원 정보</h2>", unsafe_allow_html=True
         )
 
-    # 기본 의학 용어
-    st.markdown("<h3>의료 긴급상황 필수 표현</h3>", unsafe_allow_html=True)
-    st.markdown(
-        """
-    <div class="info-box">
-        <table width="100%">
-            <tr>
-                <th>한국어</th>
-                <th>중국어</th>
-                <th>영어</th>
-            </tr>
-            <tr>
-                <td>응급실이 어디 있나요?</td>
-                <td>急诊室在哪里? (Jí zhěn shì zài nǎlǐ?)</td>
-                <td>Where is the emergency room?</td>
-            </tr>
-            <tr>
-                <td>의사를 불러주세요</td>
-                <td>请叫医生 (Qǐng jiào yīshēng)</td>
-                <td>Please call a doctor</td>
-            </tr>
-            <tr>
-                <td>두통이 있어요</td>
-                <td>我头疼 (Wǒ tóu téng)</td>
-                <td>I have a headache</td>
-            </tr>
-            <tr>
-                <td>복통이 있어요</td>
-                <td>我肚子疼 (Wǒ dùzi téng)</td>
-                <td>I have a stomachache</td>
-            </tr>
-            <tr>
-                <td>열이 있어요</td>
-                <td>我发烧了 (Wǒ fāshāo le)</td>
-                <td>I have a fever</td>
-            </tr>
-            <tr>
-                <td>알레르기가 있어요</td>
-                <td>我有过敏 (Wǒ yǒu guòmǐn)</td>
-                <td>I have allergies</td>
-            </tr>
-        </table>
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
+        hospitals = [
+            {
+                "이름": "지난시 제일인민병원",
+                "위치": "지난",
+                "전화": "+86-531-8798-7777",
+                "주소": "16 Jingshilu, Huaiyin District, Jinan",
+                "영어 가능": "일부 의사/간호사",
+                "24시간 응급실": "가능",
+                "특징": "국제 진료부 있음",
+                "거리": "지난 레일웨이 호텔에서 약 3km",
+            },
+            {
+                "이름": "태안시 중심병원",
+                "위치": "태안",
+                "전화": "+86-538-6297-999",
+                "주소": "29 Longtan Road, Taishan District, Tai'an",
+                "영어 가능": "제한적",
+                "24시간 응급실": "가능",
+                "특징": "태산 관광객 응급처치 경험 많음",
+                "거리": "태산 입구에서 약 5km",
+            },
+            {
+                "이름": "곡부시 인민병원",
+                "위치": "곡부",
+                "전화": "+86-537-4491-120",
+                "주소": "59 Chunqiu Middle Road, Qufu",
+                "영어 가능": "매우 제한적",
+                "24시간 응급실": "가능",
+                "특징": "기본 응급처치 가능",
+                "거리": "라방 호텔에서 약 2km",
+            },
+        ]
 
-# 호텔 탭 내용
-with tabs[3]:
-    st.markdown("<h2 class='sub-header'>호텔 정보</h2>", unsafe_allow_html=True)
+        for hospital in hospitals:
+            st.markdown(
+                f"""
+            <div class="emergency-box">
+                <h3>{hospital['이름']} ({hospital['위치']})</h3>
+                <p><strong>전화:</strong> {hospital['전화']}</p>
+                <p><strong>주소:</strong> {hospital['주소']}</p>
+                <p><strong>영어 의사소통:</strong> {hospital['영어 가능']}</p>
+                <p><strong>24시간 응급실:</strong> {hospital['24시간 응급실']}</p>
+                <p><strong>특징:</strong> {hospital['특징']}</p>
+                <p><strong>위치:</strong> {hospital['거리']}</p>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
 
-    hotels = [
-        {
-            "이름": "지난 레일웨이 호텔",
-            "주소": "No.19 Chezhan Street, Jinan, China",
-            "전화": "+86-531-8288-9999",
-            "체크인": "14:00 이후",
-            "체크아웃": "12:00 이전",
-            "와이파이": "무료 (로비 및 객실)",
-            "조식": "1층 레스토랑 06:30-10:00",
-            "편의시설": "헬스장, 비즈니스 센터, 세탁 서비스",
-            "프론트 데스크": "24시간 운영, 일부 직원 영어 가능",
-            "예약번호": "JN8765432",
-        },
-        {
-            "이름": "라방 호텔 (곡부)",
-            "주소": "No.29 Jingxuan East Road, Qufu, China",
-            "전화": "+86-537-505-8888",
-            "체크인": "14:00 이후",
-            "체크아웃": "12:00 이전",
-            "와이파이": "무료 (로비 및 객실)",
-            "조식": "2층 레스토랑 06:30-09:30",
-            "편의시설": "스파, 실내 수영장, 기념품점",
-            "프론트 데스크": "06:00-24:00 운영, 제한적 영어 가능",
-            "예약번호": "QF4289651",
-        },
-    ]
-
-    for hotel in hotels:
-        st.markdown(
-            f"""
-        <div class="info-box">
-            <h3>{hotel['이름']}</h3>
-            <p><strong>주소:</strong> {hotel['주소']}</p>
-            <p><strong>전화:</strong> {hotel['전화']}</p>
-            <p><strong>체크인/체크아웃:</strong> {hotel['체크인']} / {hotel['체크아웃']}</p>
-            <p><strong>와이파이:</strong> {hotel['와이파이']}</p>
-            <p><strong>조식:</strong> {hotel['조식']}</p>
-            <p><strong>편의시설:</strong> {hotel['편의시설']}</p>
-            <p><strong>프론트 데스크:</strong> {hotel['프론트 데스크']}</p>
-            <p><strong>예약번호:</strong> {hotel['예약번호']}</p>
-        </div>
-        """,
-            unsafe_allow_html=True,
-        )
-
-    # 호텔 이용 시 유용한 표현
-    st.markdown("<h3>호텔 관련 유용한 표현</h3>", unsafe_allow_html=True)
-    st.markdown(
-        """
-    <div class="info-box">
-        <ul>
-            <li><strong>수건을 더 주세요:</strong> 请再给我一些毛巾 (Qǐng zài gěi wǒ yīxiē máojīn)</li>
-            <li><strong>방 청소해 주세요:</strong> 请打扫我的房间 (Qǐng dǎsǎo wǒ de fángjiān)</li>
-            <li><strong>오늘 청소는 필요 없습니다:</strong> 今天不需要打扫 (Jīntiān bù xūyào dǎsǎo)</li>
-            <li><strong>카드키가 작동하지 않습니다:</strong> 房卡不能用了 (Fáng kǎ bùnéng yòng le)</li>
-            <li><strong>세탁 서비스 이용하고 싶습니다:</strong> 我想使用洗衣服务 (Wǒ xiǎng shǐyòng xǐyī fúwù)</li>
-            <li><strong>조식은 몇 시까지인가요?:</strong> 早餐到几点? (Zǎocān dào jǐ diǎn?)</li>
-        </ul>
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
-
-# 비상 대처법 탭 내용
-with tabs[4]:
-    st.markdown("<h2 class='sub-header'>비상 상황 대처법</h2>", unsafe_allow_html=True)
-
-    emergency_scenarios = [
-        {
-            "상황": "여권 분실",
-            "대처법": [
-                "즉시 가까운 파출소(警察局)에 분실 신고하고 분실증명서(报失证明) 발급받기",
-                "주중한국대사관/영사관에 연락하여 여행증명서(여권 임시 대체 문서) 발급 신청",
-                "필요 서류: 신분증 사본, 여권 사본(가능한 경우), 증명사진 2장",
-                "각 지역 영사관 긴급 연락처로 연락하기",
-                "항공사에 사전 연락하여 여행증명서로 귀국 가능한지 확인",
-            ],
-        },
-        {
-            "상황": "도난/강도 피해",
-            "대처법": [
-                "즉시 110에 전화하여 경찰 신고",
-                "가능하면 주변 CCTV 위치 확인하기",
-                "신용카드 분실 시 즉시 카드사에 연락하여 분실 신고",
-                "현지 경찰서에서 도난 신고서(报案证明) 발급받기",
-                "여행자 보험 가입자는 보험사에 연락하여 보상 절차 확인",
-                "대사관/영사관에 연락하여 도움 요청",
-            ],
-        },
-        {
-            "상황": "질병/부상",
-            "대처법": [
-                "가벼운 증상: 가까운 약국(药店) 방문하여 기본 약품 구매",
-                "중증 증상: 120에 전화하여 구급차 요청 또는 택시로 병원 응급실 방문",
-                "호텔 직원에게 가까운 병원 추천 요청",
-                "여행자 보험 가입자는 병원 방문 전 보험사에 연락하여 적용 여부 확인",
-                "대형 병원에서는 여권과 현금/카드 지참 필수",
-                "처방약은 반드시 영수증과 처방전 보관 (보험 청구용)",
-            ],
-        },
-        {
-            "상황": "자연재해/악천후",
-            "대처법": [
-                "현지 기상 정보 및 재난 경보 지속적 확인",
-                "호텔 직원이나 현지인의 안내에 따라 대피",
-                "대피소(避难所) 위치 파악하기",
-                "대사관/영사관 공지사항 확인 및 연락",
-                "이동 제한 시 충분한 식수와 비상식품 확보",
-                "항공/철도 일정 변경 필요시 즉시 예약 변경 시도",
-            ],
-        },
-    ]
-
-    for scenario in emergency_scenarios:
-        st.markdown(
-            f"""
-        <div class="emergency-box">
-            <h3>🚨 {scenario['상황']} 시 대처법</h3>
-            <ol>
-        """,
-            unsafe_allow_html=True,
-        )
-
-        for step in scenario["대처법"]:
-            st.markdown(f"<li>{step}</li>", unsafe_allow_html=True)
-
+        # 기본 의학 용어
+        st.markdown("<h3>의료 긴급상황 필수 표현</h3>", unsafe_allow_html=True)
         st.markdown(
             """
-            </ol>
+        <div class="info-box">
+            <table width="100%">
+                <tr>
+                    <th>한국어</th>
+                    <th>중국어</th>
+                    <th>영어</th>
+                </tr>
+                <tr>
+                    <td>응급실이 어디 있나요?</td>
+                    <td>急诊室在哪里? (Jí zhěn shì zài nǎlǐ?)</td>
+                    <td>Where is the emergency room?</td>
+                </tr>
+                <tr>
+                    <td>의사를 불러주세요</td>
+                    <td>请叫医生 (Qǐng jiào yīshēng)</td>
+                    <td>Please call a doctor</td>
+                </tr>
+                <tr>
+                    <td>두통이 있어요</td>
+                    <td>我头疼 (Wǒ tóu téng)</td>
+                    <td>I have a headache</td>
+                </tr>
+                <tr>
+                    <td>복통이 있어요</td>
+                    <td>我肚子疼 (Wǒ dùzi téng)</td>
+                    <td>I have a stomachache</td>
+                </tr>
+                <tr>
+                    <td>열이 있어요</td>
+                    <td>我发烧了 (Wǒ fāshāo le)</td>
+                    <td>I have a fever</td>
+                </tr>
+                <tr>
+                    <td>알레르기가 있어요</td>
+                    <td>我有过敏 (Wǒ yǒu guòmǐn)</td>
+                    <td>I have allergies</td>
+                </tr>
+            </table>
         </div>
         """,
             unsafe_allow_html=True,
         )
 
-    # 비상 연락처 카드
-    st.markdown("<h3>비상 연락처 카드 (인쇄 권장)</h3>", unsafe_allow_html=True)
-    st.markdown(
-        """
-    <div style="border: 2px solid #dc3545; padding: 15px; border-radius: 5px; background-color: #fff;">
-        <h4 style="text-align: center; color: #dc3545;">비상 연락처 카드</h4>
-        <hr>
-        <p><strong>긴급전화:</strong> 110 (경찰), 120 (구급차), 119 (소방)</p>
-        <p><strong>한국 대사관 긴급전화:</strong> +86-186-1173-0089</p>
-        <p><strong>여행자 이름:</strong> 박상욱 / PARK SANG WOOK</p>
-        <p><strong>여권번호:</strong> M12345678</p>
-        <p><strong>혈액형:</strong> _______</p>
-        <p><strong>알레르기:</strong> _______</p>
-        <p><strong>한국 긴급연락처:</strong> _______</p>
-        <p><strong>여행자보험:</strong> _______ (번호: _______)</p>
-        <p><strong>숙소:</strong> 지난 레일웨이 호텔(+86-531-8288-9999)<br>
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;라방 호텔(+86-537-505-8888)</p>
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
+    # 호텔 탭 내용
+    with tabs[3]:
+        st.markdown("<h2 class='sub-header'>호텔 정보</h2>", unsafe_allow_html=True)
 
-    # 다운로드 버튼 (실제로는 작동하지 않음, 구현 필요)
-    st.download_button(
-        label="비상 연락처 카드 PDF 다운로드",
-        data="비상연락처카드_데이터",
-        file_name="emergency_card.pdf",
-        mime="application/pdf",
-    )
+        hotels = [
+            {
+                "이름": "지난 레일웨이 호텔",
+                "주소": "No.19 Chezhan Street, Jinan, China",
+                "전화": "+86-531-8288-9999",
+                "체크인": "14:00 이후",
+                "체크아웃": "12:00 이전",
+                "와이파이": "무료 (로비 및 객실)",
+                "조식": "1층 레스토랑 06:30-10:00",
+                "편의시설": "헬스장, 비즈니스 센터, 세탁 서비스",
+                "프론트 데스크": "24시간 운영, 일부 직원 영어 가능",
+                "예약번호": "JN8765432",
+            },
+            {
+                "이름": "라방 호텔 (곡부)",
+                "주소": "No.29 Jingxuan East Road, Qufu, China",
+                "전화": "+86-537-505-8888",
+                "체크인": "14:00 이후",
+                "체크아웃": "12:00 이전",
+                "와이파이": "무료 (로비 및 객실)",
+                "조식": "2층 레스토랑 06:30-09:30",
+                "편의시설": "스파, 실내 수영장, 기념품점",
+                "프론트 데스크": "06:00-24:00 운영, 제한적 영어 가능",
+                "예약번호": "QF4289651",
+            },
+        ]
+
+        for hotel in hotels:
+            st.markdown(
+                f"""
+            <div class="info-box">
+                <h3>{hotel['이름']}</h3>
+                <p><strong>주소:</strong> {hotel['주소']}</p>
+                <p><strong>전화:</strong> {hotel['전화']}</p>
+                <p><strong>체크인/체크아웃:</strong> {hotel['체크인']} / {hotel['체크아웃']}</p>
+                <p><strong>와이파이:</strong> {hotel['와이파이']}</p>
+                <p><strong>조식:</strong> {hotel['조식']}</p>
+                <p><strong>편의시설:</strong> {hotel['편의시설']}</p>
+                <p><strong>프론트 데스크:</strong> {hotel['프론트 데스크']}</p>
+                <p><strong>예약번호:</strong> {hotel['예약번호']}</p>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # 호텔 이용 시 유용한 표현
+        st.markdown("<h3>호텔 관련 유용한 표현</h3>", unsafe_allow_html=True)
+        st.markdown(
+            """
+        <div class="info-box">
+            <ul>
+                <li><strong>수건을 더 주세요:</strong> 请再给我一些毛巾 (Qǐng zài gěi wǒ yīxiē máojīn)</li>
+                <li><strong>방 청소해 주세요:</strong> 请打扫我的房间 (Qǐng dǎsǎo wǒ de fángjiān)</li>
+                <li><strong>오늘 청소는 필요 없습니다:</strong> 今天不需要打扫 (Jīntiān bù xūyào dǎsǎo)</li>
+                <li><strong>카드키가 작동하지 않습니다:</strong> 房卡不能用了 (Fáng kǎ bùnéng yòng le)</li>
+                <li><strong>세탁 서비스 이용하고 싶습니다:</strong> 我想使用洗衣服务 (Wǒ xiǎng shǐyòng xǐyī fúwù)</li>
+                <li><strong>조식은 몇 시까지인가요?:</strong> 早餐到几点? (Zǎocān dào jǐ diǎn?)</li>
+            </ul>
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
+    # 비상 대처법 탭 내용
+    with tabs[4]:
+        st.markdown(
+            "<h2 class='sub-header'>비상 상황 대처법</h2>", unsafe_allow_html=True
+        )
+
+        emergency_scenarios = [
+            {
+                "상황": "여권 분실",
+                "대처법": [
+                    "즉시 가까운 파출소(警察局)에 분실 신고하고 분실증명서(报失证明) 발급받기",
+                    "주중한국대사관/영사관에 연락하여 여행증명서(여권 임시 대체 문서) 발급 신청",
+                    "필요 서류: 신분증 사본, 여권 사본(가능한 경우), 증명사진 2장",
+                    "각 지역 영사관 긴급 연락처로 연락하기",
+                    "항공사에 사전 연락하여 여행증명서로 귀국 가능한지 확인",
+                ],
+            },
+            {
+                "상황": "도난/강도 피해",
+                "대처법": [
+                    "즉시 110에 전화하여 경찰 신고",
+                    "가능하면 주변 CCTV 위치 확인하기",
+                    "신용카드 분실 시 즉시 카드사에 연락하여 분실 신고",
+                    "현지 경찰서에서 도난 신고서(报案证明) 발급받기",
+                    "여행자 보험 가입자는 보험사에 연락하여 보상 절차 확인",
+                    "대사관/영사관에 연락하여 도움 요청",
+                ],
+            },
+            {
+                "상황": "질병/부상",
+                "대처법": [
+                    "가벼운 증상: 가까운 약국(药店) 방문하여 기본 약품 구매",
+                    "중증 증상: 120에 전화하여 구급차 요청 또는 택시로 병원 응급실 방문",
+                    "호텔 직원에게 가까운 병원 추천 요청",
+                    "여행자 보험 가입자는 병원 방문 전 보험사에 연락하여 적용 여부 확인",
+                    "대형 병원에서는 여권과 현금/카드 지참 필수",
+                    "처방약은 반드시 영수증과 처방전 보관 (보험 청구용)",
+                ],
+            },
+            {
+                "상황": "자연재해/악천후",
+                "대처법": [
+                    "현지 기상 정보 및 재난 경보 지속적 확인",
+                    "호텔 직원이나 현지인의 안내에 따라 대피",
+                    "대피소(避难所) 위치 파악하기",
+                    "대사관/영사관 공지사항 확인 및 연락",
+                    "이동 제한 시 충분한 식수와 비상식품 확보",
+                    "항공/철도 일정 변경 필요시 즉시 예약 변경 시도",
+                ],
+            },
+        ]
+
+        for scenario in emergency_scenarios:
+            st.markdown(
+                f"""
+            <div class="emergency-box">
+                <h3>🚨 {scenario['상황']} 시 대처법</h3>
+                <ol>
+            """,
+                unsafe_allow_html=True,
+            )
+
+            for step in scenario["대처법"]:
+                st.markdown(f"<li>{step}</li>", unsafe_allow_html=True)
+
+            st.markdown(
+                """
+                </ol>
+            </div>
+            """,
+                unsafe_allow_html=True,
+            )
+
+        # 비상 연락처 카드
+        st.markdown("<h3>비상 연락처 카드 (인쇄 권장)</h3>", unsafe_allow_html=True)
+        st.markdown(
+            """
+        <div style="border: 2px solid #dc3545; padding: 15px; border-radius: 5px; background-color: #fff;">
+            <h4 style="text-align: center; color: #dc3545;">비상 연락처 카드</h4>
+            <hr>
+            <p><strong>긴급전화:</strong> 110 (경찰), 120 (구급차), 119 (소방)</p>
+            <p><strong>한국 대사관 긴급전화:</strong> +86-186-1173-0089</p>
+            <p><strong>여행자 이름:</strong> 박상욱 / PARK SANG WOOK</p>
+            <p><strong>여권번호:</strong> M12345678</p>
+            <p><strong>혈액형:</strong> _______</p>
+            <p><strong>알레르기:</strong> _______</p>
+            <p><strong>한국 긴급연락처:</strong> _______</p>
+            <p><strong>여행자보험:</strong> _______ (번호: _______)</p>
+            <p><strong>숙소:</strong> 지난 레일웨이 호텔(+86-531-8288-9999)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;라방 호텔(+86-537-505-8888)</p>
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
+
+        # 다운로드 버튼 (실제로는 작동하지 않음, 구현 필요)
+        st.download_button(
+            label="비상 연락처 카드 PDF 다운로드",
+            data="비상연락처카드_데이터",
+            file_name="emergency_card.pdf",
+            mime="application/pdf",
+        )
